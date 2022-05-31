@@ -1,0 +1,107 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+                
+    </head>
+    <body class="body-styles">
+        <%- include('../include/GTMBodyScript.ejs') %>
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container">
+            <section class="my-0">
+                <div class="m-auto text-center lg:w-1/2">
+                    <div class="w-full">
+                        <h1 class="text-4xl lg:text-5xl animate-charcter">SEO, Programación y Analítica</h1>                     
+                        <p>Me llamo Manuel, soy Consultor SEO y Programador, aquí abajo te dejo mi CV, si quieres que veamos tu proyecto y ver que se puede hacer con él, puedes reservar una reunión conmigo de media hora</p>
+                        <div class="mt-4">
+                            <a href="https://calendly.com/manuel-martin-morante/reunion" class="btn-blue" role="button">Reservar 30min</a>
+                            <a href="/pdf/manu-cv.pdf" download class="btn-border">Descargar CV</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="servicios">
+                <h2 class="text-center">Servicios</h2>
+                <div class="card-container lg:grid lg:grid-cols-3 lg:gap-4">
+                    <% for (let i = 0; i <= services.length - 1; i++) { %>
+                        <% const service = JSON.parse(JSON.stringify(services[i])) %>
+                        <%- include('../components/ServiceCard.ejs', {
+                            name: service.name,
+                            description: service.description,
+                            slug: service.slug,
+                        }) %>
+                    <% } %>
+                </div>
+            </section>
+            <section>
+                <h2 class="text-center">¿Quiénes confían en mí?</h2>
+                <%- include('../components/SocialProof.ejs') %>
+            </section>
+            <section>
+                <h2 class="text-center">¿Qué opinan de mí?</h2>
+                <div class="card-container lg:grid lg:grid-cols-3 lg:gap-4">
+                    <% for (let i = 0; i <= opinions.length - 1; i++) { %>
+                        <% const opinion = JSON.parse(JSON.stringify(opinions[i])) %>
+                        <%- include('../components/OpinionCard.ejs', {
+                            name: opinion.name,
+                            job: opinion.job,
+                            opinion: opinion.text,
+                            twitterUrl: opinion.twitterUrl,
+                        }) %>
+                    <% } %>
+                </div>
+            </section>
+            <section>
+                <h2 class="text-center">Últimos Proyectos</h2>
+                <% if(projects.length > 0) { %>
+                    <div class="card-container lg:grid lg:grid-cols-3 lg:gap-4">
+                        <% for (let i = 0; i <= projects.length - 1; i++) { %>
+                            <% const project = JSON.parse(projects[i]) %>
+                            <%- include('../components/ProjectCard.ejs', {
+                                name: project.name,
+                                excerpt: project.excerpt,
+                                publishDate: project.publishDate,
+                                featuredImage: project.featuredImage,
+                                slug: project.slug,
+                            }) %>
+                        <% } %>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="/portafolio" class="btn-green" role="button">Ver Mas</a>
+                    </div>
+                <% } else { %>
+                    <p class="text-lg text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-blue-400 to-pink-700">No hay proyectos</p>
+                <% } %>
+            </section>
+            <section>
+                <h2 class="text-center">Últimos posts</h2>
+                <% if(posts.length > 0) { %>
+                    <div class="card-container">
+                        <% for (let i = 0; i <= posts.length - 1; i++) { %>
+                            <% const post = JSON.parse(posts[i]) %>
+                            <%- include('../components/PostCard.ejs', {
+                                title: post.title,
+                                excerpt: post.excerpt,
+                                publishDate: post.publishDate,
+                                slug: post.slug,
+                                readingTime: post.readingTime
+                            }) %>
+                        <% } %>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="/blog" class="btn-border" role="button">Ver Todos</a>
+                    </div>
+                <% } else { %>
+                    <p class="text-lg text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-blue-400 to-pink-700">No hay posts</p>
+                <% } %>
+            </section>
+            <section>
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h2>Contáctame</h2>
+                    <p class="mx-auto leading-relaxed text-base lg:w-2/3 ">Cualquier duda que tengas, consulta, propuesta... me puedes contactar por aquí e intentaré responder lo antes posible</p>
+                </div>
+                <div class="mx-auto flex justify-center lg:w-1/2 md:w-2/3 ">
+                    <%- include('../components/ContactForm.ejs') %>
+                </div>
+            </section>
+        </main>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

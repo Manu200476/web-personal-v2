@@ -1,0 +1,21 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+                
+    </head>
+    <body class="body-styles">
+        <%- include('../include/GTMBodyScript.ejs') %>
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container-sm">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="mb-4">Contactame</h1>
+                <%- include('../components/Breadcrumbs.ejs', { breadcrumbsArray }) %>
+                <p class="mx-auto leading-relaxed text-base">Cualquier duda que tengas, consulta, propuesta... me puedes contactar por aquí e intentaré responder lo antes posible</p>
+            </div>
+            <div class="w-full lg:w-9/12 mx-auto mt-4">
+                <section>
+                    <%- include('../components/ContactForm.ejs') %> 
+                </section>
+            </div>
+        </main>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

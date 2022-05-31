@@ -1,0 +1,28 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+
+    </head>
+    <body class="body-styles">
+        <%- include('../include/GTMBodyScript.ejs') %>
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container-sm">
+            <h1><%= metadata.name %></h1>
+            <%- include('../components/AuthorCard.ejs') %>
+            <%- include('../components/Breadcrumbs.ejs', {breadcrumbsArray}) %>
+            <p class="text-lg font-semibold mt-4">Datos sobre el proyecto:</p>
+            <ul class="ml-6 mt-4">
+                <li class="text-black"><span class="project-item-name">Nombre:</span> <%= metadata.name %></li>
+                <li class="text-black"><span class="project-item-name">Tipo:</span> <%= metadata.type %></li>
+                <li class="text-black"><span class="project-item-name">Duracion:</span> <%= metadata.time %></li>
+                <li class="text-black"><span class="project-item-name">Stack Usado / Herramientas:</span> <%= metadata.stack %></li>
+                <li class="text-black"><span class="project-item-name">Dificultad (para mi):</span> <%= metadata.difficulty %></li>
+            </ul>
+            <div id="content" class="my-6"></div>
+            <%- include('../components/SocialButtons.ejs') %>
+        </main>
+        <script>
+            let container = document.querySelector('#content')
+            container.innerHTML = <%- JSON.stringify(content) %>
+        </script>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

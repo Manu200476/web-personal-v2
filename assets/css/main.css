@@ -1,0 +1,73 @@
+/* Variables */
+:root{
+  --green-500: #22c55e;
+  --blue-500: #3b82f6;
+  --teal-400: #2dd4bf;
+  --blue-300: #93c5fd;
+  --blue-700: #1d4ed8;
+  --yellow-500: #eab308;
+  --gray-800: #1f2937;
+}
+
+/* Section */
+section{
+  margin: 4rem 0;
+}
+section a{
+  color: var(--yellow-500);
+  font-weight: 700;
+}
+
+/* Code Block */
+pre{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: white;
+  background-color: var(--gray-800);
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-track {
+  border-radius: .4rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4B5563; 
+}
+
+/* Home Text Animation */
+.animate-charcter{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    var(--blue-700) 0%,
+    var(--blue-300) 29%,
+    var(--green-500) 67%,
+    var(--teal-400) 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

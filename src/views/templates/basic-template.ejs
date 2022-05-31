@@ -1,0 +1,17 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+
+    </head>
+    <body class="body-styles">
+        <%- include('../include/GTMBodyScript.ejs') %>
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container-sm">
+            <%- include('../components/Breadcrumbs.ejs', { breadcrumbsArray }) %>
+            <div id="container-body"></div>
+        </main>
+        <script>
+            let container = document.querySelector('#container-body')
+            container.innerHTML = <%- JSON.stringify(content) %>
+        </script>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Meta Tags-->
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Manuel Martin">
+        <meta name="robots" content="<%= metadata.index %>, <%= metadata.follow %>" />
+        <title><%= metadata.title %></title>
+        <meta name="description" content="<%= metadata.metaDescription %>" />
+
+        <!--Open Graph Data-->
+
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="<%= metadata.title %>" />
+        <meta property="og:description" content="<%= metadata.metaDescription %>" />
+        <meta property="og:image" content="https://manuelmartin.me<% metadata.featuredImage %>" />
+        <meta property="og:url" content="https://manuelmartin.me<%= metadata.path %>" />
+        <meta property="og:site_name" content="ManuelMartin" />
+
+        <!--Twitter Card-->
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@Manu_200476">
+        <meta name="twitter:creator" content="@Manu_200476">
+        <meta name="twitter:title" content="<%= metadata.title %>">
+        <meta name="twitter:description" content="<%= metadata.metaDescription %>">
+        <meta name="twitter:image" content="https://manuelmartin.me<%= metadata.featuredImage %>">
+
+        <!--Schema-->
+
+        <script type="application/ld+json">
+            {
+                "@context":"https://schema.org",
+                "@graph":[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Hervas",
+                            "addressRegion": "CA",
+                            "postalCode": "10700",
+                            "streetAddress": "Bajada La Cuestecilla N 23"
+                        },
+                        "name": "ManuelMartin",
+                        "telephone": "+34 675991805",
+                        "url": "http://manuelmartin.me",
+                        "logo": {
+                            "@type":"ImageObject",
+                            "@id": "<%= metadata.featuredImage %>",
+                            "url": "https://manuelmartin.me<%= metadata.featuredImage %>",
+                            "description":"<%= metadata.metaDescription %>",
+                            "inLanguage":"es"
+                        },
+                        "email": "info@manuelmartin.me"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "@id": "http://manuelmartin.me/",
+                        "url": "http://manuelmartin.me/",
+                        "name":"Manuel Martin",
+                        "inLanguage":"es"
+                    },
+                    {
+                        "@type":"ImageObject",
+                        "@id":"<%= metadata.featuredImage %>",
+                        "url":"https://manuelmartin.me<%= metadata.featuredImage %>",
+                        "width":"200",
+                        "height":"200",
+                        "inLanguage":"es"
+                    },
+                    {
+                        "@type":"Person",
+                        "@id":"https://manuelmartin.me/sobre-mi",
+                        "name":"Manuel Martin",
+                        "url":"https://manuelmartin.me/sobre-mi",
+                        "image":{
+                            "@type":"ImageObject",
+                            "@id":"https://manuelmartin.me/images/foto-personal.png",
+                            "url":"https://manuelmartin.me/images/foto-personal.png",
+                            "inLanguage":"es"
+                        }
+                    },
+                    {
+                        "@type":"WebPage",
+                        "@id":"https://manuelmartin.me/",
+                        "url":"https://manuelmartin.me/",
+                        "name":"Manuel Martin || SEO y Web Developer",
+                        "author":{ 
+                            "@id":"https://manuelmartin.me/sobre-mi"
+                        },
+                        "primaryImageOfPage":{
+                            "@id": "<%= metadata.featuredImage %>"
+                        },
+                        "inLanguage":"es"
+                    },
+                    {
+                        "@type":"Article",
+                        "headline": "<%= metadata.title %>",
+                        "datePublished": "<%= metadata.publishDate %>",
+                        "author":{
+                            "@id":"https://manuelmartin.me/sobre-mi"
+                        },
+                        "publisher":{
+                            "@id":"https://manuelmartin.me/sobre-mi"
+                        },
+                        "description": "<%= metadata.metaDescription %>",
+                        "name": "<%= metadata.title %>",
+                        "image":{
+                            "@id": "https://manuelmartin.me<%= metadata.featuredImage %>"
+                        },
+                        "inLanguage":"es"
+                    }
+                ]
+            }
+        </script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <!-- Google Tag Manager -->
+
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P526CF3');
+        </script>
+
+        <!--Static Files-->
+        
+        <link href="/css/style.css" rel="stylesheet"> 
+        <link href="/css/main.css" rel="stylesheet"> 
+        <link href="/favicon.png" rel="icon" type="image/png" />
+        <script src="/js/navbar.js" defer></script>

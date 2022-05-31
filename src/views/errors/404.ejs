@@ -1,0 +1,19 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+
+    </head>
+    <body class="body-styles">
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container" id="container-body">
+            <h1>No hemos podido encontrar la página que buscabas, lo sentimos</h1>
+            <div class="flex-row flex justify-center">
+                <a href="/contacto" rel="nofollow" role="button" class="btn-red mr-2">
+                    Contacto
+                </a>
+                <a href="/blog" rel="nofollow" role="button" class="btn-yellow">
+                    Blog
+                </a>
+            </div>
+        </main>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

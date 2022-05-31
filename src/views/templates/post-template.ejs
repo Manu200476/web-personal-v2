@@ -1,0 +1,19 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+
+    </head>
+    <body class="body-styles">
+        <%- include('../include/GTMBodyScript.ejs') %>
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container-sm">
+            <h1><%= metadata.title %></h1>
+            <%- include('../components/AuthorCard.ejs') %>
+            <%- include('../components/Breadcrumbs.ejs', { breadcrumbsArray }) %>
+            <div id="content"></div>
+ç        </main>
+        <script>
+            let container = document.querySelector('#content')
+            container.innerHTML = <%- JSON.stringify(content) %>
+        </script>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

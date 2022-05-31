@@ -1,0 +1,54 @@
+name: Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  avoid-duplicute-integrations:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          acces_token: ${{ github.token }}
+
+  linter:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+         fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+         node-version: 16
+      - name: Intall Dependencies
+        run: npm ci
+      - name: Linter
+        run: npm run lint
+
+  css:
+    runs-on: ubuntu-22.04
+    env:
+      NODE_ENV: production
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v2.3.4
+         with:
+          fetch-depth: 0
+       - name: Setup Node
+         uses: actions/setup-node@v2
+         with:
+          node-version: 16
+       - name: Install Dependecies
+         run: npm ci
+       - name: Build CSS
+         run: npm run build:css
+
+

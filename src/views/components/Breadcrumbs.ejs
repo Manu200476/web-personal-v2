@@ -1,0 +1,16 @@
+<nav class="w-full my-4">
+  <ol class="list-reset flex list-none">
+    <% for (let i = 0; i < breadcrumbsArray.length; i++) { %>
+        <% const page = breadcrumbsArray[i] %>
+        <% if (page.position === 0) {  %>
+            <li><a href="/" class="text-black font-bold"><%= page.name %></a></li>
+            <li><span class="text-black mx-2">/</span></li>
+        <% } else if (page.position === 'last') { %>
+            <li class="text-green-500"><%= page.name %></li>
+        <% } else { %>
+            <li><a href="<%= page.link %>" class="text-black"><%= page.name %></a></li>
+            <li><span class="text-black mx-2">/</span></li>
+        <% } %>
+    <% } %>
+  </ol>
+</nav>

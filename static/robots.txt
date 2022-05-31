@@ -1,0 +1,4 @@
+Disallow: /error-500
+Disallow: /error-404
+
+Sitemap: https://manuelmartin.me/sitemap.xml

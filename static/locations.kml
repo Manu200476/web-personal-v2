@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Locations for Diseño Web | Programación | SEO por Manuel Martin.</name>
+		<atom:author>
+			<atom:name>Manuel Martin Morante</atom:name>
+		</atom:author>
+		<atom:link rel="related" href="https://manuelmartin.me" />
+		<Folder>
+			<Placemark>
+				<name><![CDATA[Dise&ntilde;o Web | Programaci&oacute;n | SEO por Manuel Martin]]></name>
+				<address><![CDATA[C. Cuestecilla, 23, 10700 Hervás, Cáceres, Hervás, 10700, Spain]]></address>
+				<phoneNumber><![CDATA[675991805]]></phoneNumber>
+				<description><![CDATA[Me llamo Manuel y tengo mas de 5 años de experiencia en el mundo digital aunque profesionalmente serán unos 2<br />
+<br />
+He trabajado desde webs muy pequeñas, webs propias hasta E-commerce de millones de URLs, trabajando SEO Internacional, migraciones....<br />
+<br />
+A continuación te voy a explicar un poco de mis servicios y de lo que te puede ofrecer<br />
+<br />
+Comenzando por el SEO si necesitas aumentar el trafico online y el negocio de tu web, este es tu servicio ideal<br />
+<br />
+Otro diseño seria el desarrollo a medida, donde te puedo ayudar con problemas mas complejos como integraciones con ERPs y CRMs<br />
+<br />
+Otro servicio seria el diseño web, donde voy a poder brindar una web moderna y con un buen diseño, también te puedo ayudar con tu ecommerce]]></description>
+				<Point>
+					<coordinates>-5.8564206,40.2741361,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>

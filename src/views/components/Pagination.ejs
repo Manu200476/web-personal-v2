@@ -1,0 +1,31 @@
+<% if(totalPages > 1) { %>
+    <div class="flex justify-center mt-4">
+        <% if(previousPage >= 1) { %>
+            <% if(previousPage === 1) { %>
+                <a role="btn" class="btn-red mr-2" href="<%= baseUrl %>">
+                    <
+                </a>
+            <% } else{  %>
+                <a role="btn" class="btn-red mr-2" href="<%= baseUrl %>?page=<%= previousPage %>">
+                    <
+                </a>
+            <% } %>
+        <% } %>
+        <% for (let page = 1; page <= totalPages; page++) { %>
+            <% if (page === 1) {  %>
+                <a role="btn" class="btn-red mx-2" href="<%= baseUrl %>">
+                    <%= page %>
+                </a>
+            <% } else { %>
+                <a role="btn" class="btn-red mx-2" href="<%= baseUrl %>?page=<%= page %>">
+                    <%= page %>
+                </a>
+            <% } %>
+        <% } %>
+        <% if(totalPages >= nextPage) { %>    
+            <a role="btn" class="btn-red ml-2" href="<%= baseUrl %>?page=<%= nextPage %>">
+                >
+            </a>
+        <% } %>
+    </div>
+<% } %>

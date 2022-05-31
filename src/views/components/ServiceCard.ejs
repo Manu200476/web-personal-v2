@@ -1,0 +1,11 @@
+<div class="p-4 w-full">
+    <div class="flex flex-col rounded-lg h-full">
+        <div class="flex items-center">
+            <h3><%= name %></h3>
+        </div>
+        <div class="flex-grow">
+            <p><%= description %></p>
+        </div>
+        <%- include('../components/ReadMoreButton.ejs', { slug, basePath: '' }) %>
+    </div>
+</div>

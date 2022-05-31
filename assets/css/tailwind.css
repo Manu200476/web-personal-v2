@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold text-center my-4 text-transparent text-black;
+  }
+  h2 {
+    @apply text-xl font-semibold my-4 text-black;
+  }
+  h3{
+    @apply text-lg my-4 text-black;
+  }
+  p{
+    @apply leading-normal text-base text-black;	
+  }
+  ol,ul {
+    @apply ml-4;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-2 px-4 font-semibold rounded-lg shadow-md items-center inline-flex;
+  }
+  .btn-blue{
+    @apply btn text-white bg-blue-600 hover:bg-blue-700 transition duration-300;
+  }
+  .btn-red{
+    @apply btn bg-red-500 text-white hover:text-white;
+  }
+  .btn-yellow{
+    @apply btn bg-yellow-500 text-white hover:text-white;
+  }
+  .btn-green{
+    @apply btn bg-green-500 text-white hover:bg-green-600 transition duration-300;
+  }
+  .btn-border{
+    @apply btn bg-transparent border-2 border-green-500 hover:bg-green-500 text-black hover:text-white transition duration-300;
+  }
+  .list-nav {
+    @apply py-4 mx-2 font-semibold text-black border-b-4 border-transparent hover:border-yellow-500;
+  }
+  .footer-text{
+    @apply my-2 text-sm text-black;
+  }
+  .footer-headings{
+    @apply text-black text-lg my-2;
+  }
+  .section-container{
+    @apply container mx-auto py-4 px-8 lg:px-40;
+  }
+  .section-container-sm{
+    @apply mx-auto py-4 px-8 lg:px-40 w-full lg:w-9/12;
+  }
+  .body-styles{
+    @apply bg-gray-100 min-h-screen overflow-x-hidden font-sans;
+  }
+  .card-container{
+    @apply container lg:px-10 px-0 mx-auto;
+  }
+  .toggle-list{
+    @apply bg-gray-200 hover:bg-gray-400 py-2 px-4 flex items-center;
+  }
+  .project-item-name{
+    @apply font-semibold;
+  }
+  .read-more-btn{
+    @apply text-blue-500 hover:text-blue-600 inline-flex items-center mt-4 cursor-pointer mb-4;
+  }
+}

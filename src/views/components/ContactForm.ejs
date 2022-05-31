@@ -1,0 +1,50 @@
+<form method="POST" action="/api/send-mail">
+    <div class="lg:w-2/3 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+            <div class="p-2 w-1/2">
+                <div class="relative">
+                    <label for="name" class="leading-7 text-sm text-black font-semibold">Nombre</label>
+                    <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-40 rounded border border-green-500 focus:border-5 text-sm outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+            </div>
+            <div class="p-2 w-1/2">
+                <div class="relative">
+                    <label for="email" class="leading-7 text-sm text-black font-semibold">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-40 rounded border border-green-500 focus:border-5 text-sm outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+            </div>
+            <div class="p-2 w-full">
+                <div class="relative">
+                    <label for="services" class="leading-7 text-sm text-black font-semibold">Servicio</label>
+                    <select name="service" class="w-full bg-gray-100 bg-opacity-40 rounded border border-green-500 focus:border-5 text-sm outline-none text-black py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        <option selected>Ninguno</option>
+                        <option value="Auditoría SEO">Auditoría SEO</option>
+                        <option value="Consultoría SEO">Consultoría SEO</option>
+                        <option value="Diseño Web">Diseño Web</option>
+                        <option value="Mantenimiento Web">Mantenimiento Web</option>
+                        <option value="Desarrollo a Media">Desarrollo a Media</option>
+                        <option value="Asesoría SEO">Asesoría SEO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="p-2 w-full">
+                <div class="relative">
+                    <label for="subject" class="leading-7 text-sm text-black font-semibold">Asunto</label>
+                    <input type="text" id="subject" name="subject" class="w-full bg-gray-100 bg-opacity-40 rounded border border-green-500 focus:border-5 text-sm outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+            </div>
+            <div class="p-2 w-full">
+                <div class="relative">
+                    <label for="message" class="leading-7 text-sm text-black font-semibold">Mensaje</label>
+                    <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-40 h-32 resize-none rounded border border-green-500 focus:border-5 text-sm outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+            </div>
+            <div class="p-2 mx-auto">
+                <button class="btn-border">Enviar</button>
+            </div>
+            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+                <%- include('./SocialButtons.ejs') %>
+            </div>
+        </div>
+    </div>
+</form>

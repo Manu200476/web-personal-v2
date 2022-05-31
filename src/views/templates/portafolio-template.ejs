@@ -1,0 +1,35 @@
+    <%- include('../include/Head.ejs', { ...metadata }) %>
+
+    </head>
+    <body class="body-styles">
+        <%- include('../include/GTMBodyScript.ejs') %>
+        <%- include('../components/Navbar.ejs') %>
+        <main class="section-container">
+            <h1>Portafolio</h1>
+            <%- include('../components/Breadcrumbs.ejs', {breadcrumbsArray}) %>
+            <% if(chunkFiles.length > 0) { %>
+                <div class="card-container lg:grid lg:grid-cols-3 lg:gap-4">
+                    <% for (let i = 0; i <= chunkFiles.length - 1; i++) { %>
+                        <% const project = JSON.parse(chunkFiles[i]) %>
+                        <%- include('../components/ProjectCard.ejs', {
+                            name: project.name,
+                            excerpt: project.excerpt,
+                            publishDate: project.publishDate,
+                            featuredImage: project.featuredImage,
+                            slug: project.slug,
+                        }) %>
+                    <% } %>
+                </div>
+                <%- include('../components/Pagination.ejs', { 
+                    baseUrl: '/portafolio',
+                    totalPages,
+                    previousPage,
+                    nextPage
+                }) %>
+            <% } else { %>
+                <p class="text-lg text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-blue-400 to-pink-700">No hay posts</p>
+            <% } %>
+            </main>
+    </body>
+    <%- include('../include/Footer.ejs') %>
+</html>

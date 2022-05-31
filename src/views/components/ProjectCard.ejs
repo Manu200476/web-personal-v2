@@ -1,0 +1,9 @@
+<div class="p-4 w-full mb-0 md:mb-6">
+    <div class="rounded-lg h-64 overflow-hidden">
+        <img src="<%= featuredImage %>" alt="<%= name %>" title="<%= name %>" class="object-cover object-center h-full w-full">
+    </div>
+    <h3><%= name %></h3>
+    <p class="text-gray-900"><%= publishDate %></p>
+    <p class="mt-2"><%= excerpt.substring(0, 200) %>...</p>
+    <%- include('./ReadMoreButton.ejs', { slug, basePath: '/portafolio' }) %>
+</div>
