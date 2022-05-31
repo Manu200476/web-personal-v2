@@ -6,7 +6,7 @@ const app = express()
 
 dotenv.config()
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 const indexRouter = require('./src/routes')
 const pagesRouter = require('./src/routes/pages')
