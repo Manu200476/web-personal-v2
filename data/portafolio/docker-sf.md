@@ -31,20 +31,20 @@ Pero antes de nada quiero hacer un lista con 4-5 perosnas de las que puedes apre
 Esta es una cosa que quiero hacer en todo mis proyectos y posts, mencionar a 4-5 personas de las que yo mismo he aprendido mucho
 \
 \
-*[MjChacon y Laika Team para SF](https://laikateam.com/blog/configurar-screaming-frog/)*
+[MjChacon y Laika Team para SF](https://laikateam.com/blog/configurar-screaming-frog/)
 \
 \
-*[Pelado Nerd, muy buen contenido sobre DevOps](https://www.youtube.com/c/PeladoNerd)*
+[Pelado Nerd, muy buen contenido sobre DevOps](https://www.youtube.com/c/PeladoNerd)
 \
 \
-*[Gustavo Arellano, gran contenido sobre backend](https://twitter.com/arellano_gus)*
+[Gustavo Arellano, gran contenido sobre backend](https://twitter.com/arellano_gus)
 
 ## Lo que vas a necesitar
 
     Un maquina / servidor con Ubuntu instalado
     Tener Instalado Git, Docker y un editor de texto como Nano o VIM
 
-Te dejo por aqui el **[repositorio de Github](https://github.com/Manu200476/docker-image-sf.git)** con el proyecto
+Te dejo por aqui el [repositorio de Github](https://github.com/Manu200476/docker-image-sf.git) con el proyecto
 
 ## Clonar Repositorio de GitHub
 
@@ -75,7 +75,7 @@ Después tenemos otro archivo llamado .screamingfrogseospider, aquí vamos a con
 
     sudo nano .screamingfrogseospider
 
-Te dejo por **[aquí](https://www.it-swarm-es.com/es/java/que-son-los-parametros-xms-y-xmx-al-iniciar-jvm/1071515239/)** una guía para poner la RAM que necesites y en el formato específico que la debes poner
+Te dejo por [aquí](https://www.it-swarm-es.com/es/java/que-son-los-parametros-xms-y-xmx-al-iniciar-jvm/1071515239/) una guía para poner la RAM que necesites y en el formato específico que la debes poner
 \
 \
 Por último tenemos que crear un archivo llamado license.txt, aquí vamos a configurar nuestra licencia para tener todas las opciones de SF disponibles, entónces lo que haríamos sería 
@@ -102,7 +102,7 @@ Ahora ya lo que nos queda es correr nuestro primer crawl
 
     docker run -d -it --name screaming-frog -v mi_volumen:/home/crawls ejemplo-01 --crawl nike.com --headless
 
-Screaming Frog en su version CLI tiene un monton de opciones, aqui te dejo la **[documentación oficial](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#command-line)** para que puedas ampliar información
+Screaming Frog en su version CLI tiene un monton de opciones, aqui te dejo la [documentación oficial](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#command-line) para que puedas ampliar información
 \
 \
 Muchas gracias!!!

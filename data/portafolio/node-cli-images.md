@@ -23,18 +23,36 @@ Antes de nada, os dejo **[aquí](https://github.com/Manu200476/imagemin)** el re
 \
 \
 A continuacion te dejo con unos posts relacionados que pueden interesarte y de referentes de los cuales yo he aprendido:
-
-- *[Como crear una herramienta de linea de comando en NodeJS](https://tecnops.es/creando-nuestro-cli-command-line-interface-usando-nodejs/)*
-- *[Optimizar y Redimensionar imagenes con Node](https://ahmadawais.com/resize-optimize-images-javascript-node/)*
-- *[NodeJS](https://nodejs.org/es/docs/)*
-- *[NPM](https://www.npmjs.com/)*
-- *[Inquirer](https://www.npmjs.com/package/inquirer)*
-- *[Figlet](https://www.npmjs.com/package/figlet)*
-- *[Chalk](https://www.npmjs.com/package/chalk)*
-- *[Imagemin](https://www.npmjs.com/package/imagemin)*
-- *[Imagemin-jpegtran](https://www.npmjs.com/package/imagemin-jpegtran)*
-- *[Imagemin-mozjpeg](https://www.npmjs.com/package/imagemin-mozjpeg)*
-
+\
+\
+[Como crear una herramienta de linea de comando en NodeJS](https://tecnops.es/creando-nuestro-cli-command-line-interface-usando-nodejs/)
+\
+\
+[Optimizar y Redimensionar imagenes con Node](https://ahmadawais.com/resize-optimize-images-javascript-node/)
+\
+\
+[NodeJS](https://nodejs.org/es/docs/)
+\
+\
+[NPM](https://www.npmjs.com/)
+\
+\
+[Inquirer](https://www.npmjs.com/package/inquirer)
+\
+\
+[Figlet](https://www.npmjs.com/package/figlet)
+\
+\
+[Chalk](https://www.npmjs.com/package/chalk)
+\
+\
+[Imagemin](https://www.npmjs.com/package/imagemin)
+\
+\
+[Imagemin-jpegtran](https://www.npmjs.com/package/imagemin-jpegtran)
+\
+\
+[Imagemin-mozjpeg](https://www.npmjs.com/package/imagemin-mozjpeg)
 \
 \
 Lo primero es tener instalado Node y NPM, para comprobarlo, lo unico que teneis que hacer es
