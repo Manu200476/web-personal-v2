@@ -1,9 +1,10 @@
 const error404 = (req, res) => {
   res.status(404).render('errors/404', {
     metadata: {
-      metaDescription: 'vrvr',
+      title: 'Error 404',
+      metaDescription: '',
       index: 'noindex',
-      follow: 'follow',
+      follow: 'nofollow',
       featuredImage: '/public/images/favicon.png',
     },
   })
@@ -12,9 +13,10 @@ const error404 = (req, res) => {
 const error500 = (req, res) => {
   res.status(500).render('errors/500', {
     metadata: {
-      metaDescription: 'vrvr',
+      metaDescription: '',
       index: 'noindex',
-      follow: 'follow',
+      title: 'Error 500',
+      follow: 'nofollow',
       featuredImage: '/public/images/favicon.png',
     },
   })

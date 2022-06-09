@@ -15,9 +15,10 @@ const contactController = (req, res) => {
   res.render('pages/contact', {
     breadcrumbsArray,
     metadata: {
+      title: 'Contacto',
       metaDescription: '',
       index: 'noindex',
-      follow: 'follow',
+      follow: 'nofollow',
       title: 'Contacto',
       featuredImage: '/public/images/favicon.png',
     },
